@@ -1,6 +1,6 @@
 namespace ASP_NetCore_Proyecto.Models
 {
-    public class Evaluación:ObjetoEscuelaBase
+    public class Evaluacion:ObjetoEscuelaBase
     {
         public Alumno Alumno { get; set; }
         public string AlumnoId { get; set; }

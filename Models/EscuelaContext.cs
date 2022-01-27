@@ -8,7 +8,7 @@ namespace ASP_NetCore_Proyecto.Models
         public DbSet<Asignatura> Asignaturas { get; set; }
         public DbSet<Alumno> Alumnos { get; set; }
         public DbSet<Curso> Cursos { get; set; }
-        public DbSet<Evaluación> Evaluaciónes { get; set; }
+        public DbSet<Evaluacion> Evaluaciónes { get; set; }
 
         public EscuelaContext(DbContextOptions<EscuelaContext> options) : base(options)
         {
@@ -85,11 +85,11 @@ namespace ASP_NetCore_Proyecto.Models
         {
             return new List<Curso>(){
 
-                new Curso() {Id = Guid.NewGuid().ToString(), EscuelaId = escuela.Id, Nombre = "101", Jornada = TiposJornada.Mañana },
-                new Curso() {Id = Guid.NewGuid().ToString(), EscuelaId = escuela.Id, Nombre = "201", Jornada = TiposJornada.Mañana},
-                new Curso() {Id = Guid.NewGuid().ToString(), EscuelaId = escuela.Id, Nombre = "301", Jornada = TiposJornada.Mañana},
-                new Curso() {Id = Guid.NewGuid().ToString(), EscuelaId = escuela.Id, Nombre = "401", Jornada = TiposJornada.Tarde },
-                new Curso() {Id = Guid.NewGuid().ToString(), EscuelaId = escuela.Id, Nombre = "501", Jornada = TiposJornada.Tarde}
+                new Curso() {Id = Guid.NewGuid().ToString(), EscuelaId = escuela.Id, Nombre = "101", Jornada = TiposJornada.Mañana, Dirección = "Calle Telesfóro Jaime #58, Bayona, Sto Dgo Oeste." },
+                new Curso() {Id = Guid.NewGuid().ToString(), EscuelaId = escuela.Id, Nombre = "201", Jornada = TiposJornada.Mañana, Dirección = "Calle Telesfóro Jaime #58, Bayona, Sto Dgo Oeste."},
+                new Curso() {Id = Guid.NewGuid().ToString(), EscuelaId = escuela.Id, Nombre = "301", Jornada = TiposJornada.Mañana, Dirección = "Calle Telesfóro Jaime #58, Bayona, Sto Dgo Oeste."},
+                new Curso() {Id = Guid.NewGuid().ToString(), EscuelaId = escuela.Id, Nombre = "401", Jornada = TiposJornada.Tarde, Dirección = "Calle Telesfóro Jaime #58, Bayona, Sto Dgo Oeste." },
+                new Curso() {Id = Guid.NewGuid().ToString(), EscuelaId = escuela.Id, Nombre = "501", Jornada = TiposJornada.Tarde, Dirección = "Calle Telesfóro Jaime #58, Bayona, Sto Dgo Oeste."}
 
             };
         }

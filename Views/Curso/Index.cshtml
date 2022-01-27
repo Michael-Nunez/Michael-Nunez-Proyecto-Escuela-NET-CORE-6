@@ -1,4 +1,4 @@
-@model IEnumerable<ASP_NetCore_Proyecto.Models.Escuela>
+@model IEnumerable<ASP_NetCore_Proyecto.Models.Curso>
 
 @{
     ViewData["Title"] = "Index";
@@ -13,22 +13,16 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.AñoDeCreación)
+                @Html.DisplayNameFor(model => model.Nombre)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Pais)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Ciudad)
+                @Html.DisplayNameFor(model => model.Jornada)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Dirección)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.TipoEscuela)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Nombre)
+                @Html.DisplayNameFor(model => model.Escuela)
             </th>
             <th></th>
         </tr>
@@ -37,22 +31,16 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.AñoDeCreación)
+                @Html.DisplayFor(modelItem => item.Nombre)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Pais)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Ciudad)
+                @Html.DisplayFor(modelItem => item.Jornada)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Dirección)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.TipoEscuela)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nombre)
+                @Html.DisplayFor(modelItem => item.Escuela.Id)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
@@ -63,5 +51,3 @@
 }
     </tbody>
 </table>
-
-@section scripts { @RenderSection("scripts", required: true) }

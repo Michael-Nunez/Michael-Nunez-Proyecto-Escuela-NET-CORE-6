@@ -2,3 +2,5 @@
 [Bb]in/
 .vscode/
 **.csproj
+appsettings.Development.json
+appsettings.json

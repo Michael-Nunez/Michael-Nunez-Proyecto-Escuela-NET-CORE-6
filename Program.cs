@@ -6,9 +6,23 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddDbContext<EscuelaContext>(
+/*builder.Services.AddDbContext<EscuelaContext>(
     options => options.UseInMemoryDatabase(databaseName: "testDB")
-);
+);*/
+
+string connString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+builder.Services.AddDbContext<EscuelaContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+
+});
+
+/*string connectionString = builder GetConnectionString("DefaultConnection");
+
+builder.Services.AddDbContext<EscuelaContext>(
+    options => options.UseSqlServer(connectionString)
+);*/
 
 var app = builder.Build();
 
